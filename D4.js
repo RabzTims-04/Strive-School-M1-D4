@@ -135,27 +135,19 @@ console.log(reverseString('Strive'));
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 
-/* const upperFirst = function(capitalize){
+    const upperFirst = function(capitalize){
     
     //.split(" ") will split the sentence in an array or words
     let wordArray = capitalize.split(" ")
 
-    for(let i=0; i<capitalize.length; i++){
+    for(let i=0; i<wordArray.length; i++){
         
-        wordArray[i] = wordArray[i][0].toUpperCase() + wordArray[i].substr(1)
-
-        //wordArray[i][0] will give for every array of word it's first character which is at index 0 for every word. 
-        //.toUpperCase() will capitalize letter at index 0 which is first letter of each word
-        //
+        wordArray[i] = wordArray[i].charAt(0).toUpperCase() + wordArray[i].substr(1)
     }
-    //let firstCapitalLetter = capitalize.charAt(0).toUpperCase() + capitalize.slice(1)
-    //return firstCapitalLetter
-
-   let finalWord =  wordArray.join(" ")
-   return finalWord
+     return wordArray.join(" ")
 }
 
-console.log(upperFirst('my name is rabia')); */
+console.log(upperFirst('my name is rabia'));
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
