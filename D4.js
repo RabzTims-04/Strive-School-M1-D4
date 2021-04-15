@@ -137,14 +137,17 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 
     const upperFirst = function(capitalize){
     
-    //.split(" ") will split the sentence in an array or words
+    //.split(" ") will split the sentence in an array of words
     let wordArray = capitalize.split(" ")
 
     for(let i=0; i<wordArray.length; i++){
-        
+        //.substr(1) will return all letter except first letter and then will combine with first letter which is not capitalized
+        //charAt(0) will give character at index 0
+        //wordArray[i] will display word at index i and for each index i word, charAt(0) will display letter of that word at index 0 and .UpperCase will capitalize this word
         wordArray[i] = wordArray[i].charAt(0).toUpperCase() + wordArray[i].substr(1)
     }
      return wordArray.join(" ")
+     //.join() concatenates the array
 }
 
 console.log(upperFirst('my name is rabia'));
